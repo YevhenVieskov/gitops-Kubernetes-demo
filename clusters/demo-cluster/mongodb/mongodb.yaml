@@ -4,15 +4,16 @@ metadata:
   name: mongodb
   namespace: mongodb
 spec:
-  interval: 5m
+  interval: 1m
   chart:
     spec:
       chart: mongodb
       sourceRef:
         kind: HelmRepository
         name: bitnami
-      valuesFiles:
-        - values.yaml
-        - values-production.yaml
+        namespace: flux-system
+      #valuesFiles:
+        #- values.yaml
+        #- values-production.yaml
   values:
     replicaCount: 2
