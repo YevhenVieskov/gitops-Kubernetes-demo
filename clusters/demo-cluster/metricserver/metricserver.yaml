@@ -14,4 +14,11 @@ spec:
         name: bitnami
         namespace: flux-system
       interval: 1m
+      values:
+        command:
+        - metrics-server
+        - --kubelet-insecure-tls
+        - --kubelet-preferred-address-types=InternalIP
+
+
   
