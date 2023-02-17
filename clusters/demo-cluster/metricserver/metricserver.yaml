@@ -12,7 +12,7 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: bitnami
-        namespace: kube-system
+        namespace: flux-system
       interval: 1m
   postRenderers:
     # Instruct helm-controller to use built-in "kustomize" post renderer.
