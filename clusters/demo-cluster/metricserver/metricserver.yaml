@@ -14,6 +14,7 @@ spec:
         name: bitnami
         namespace: flux-system
   values:
+    containerPorts: 10250
     command:
       - metrics-server
       - --kubelet-insecure-tls
