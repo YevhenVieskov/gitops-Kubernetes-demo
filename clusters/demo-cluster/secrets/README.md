@@ -166,6 +166,7 @@ As the syntax to encrypt a file is bit tedious (due to the fact that you must pa
 
 `export SOPS_AGE_KEY_FILE=$HOME/age.agekey`
 
+`export AGE_PUBLIC_KEY=$(cat $SOPS_AGE_KEY_FILE |grep -oP "public key: \K(.*)") $2 $3 $1`
 
 ```
 function cypher {
@@ -173,7 +174,7 @@ function cypher {
     extension="${filename##*.}"
     filename="${filename%.*}"
     AGE_PUBLIC_KEY=$(cat $SOPS_AGE_KEY_FILE |grep -oP "public key: \K(.*)") $2 $3 $1
-    sops --encrypt --age $AGE_PUBLIC_KEY  --kms $SOPS_KMS_ARN_PROD >  "$filename.enc.$extension"
+    sops --encrypt --age $AGE_PUBLIC_KEY  --kms $SOPS_KMS_ARN_PROD $1 >  "$filename.enc.$extension"
 }
 
 ```
@@ -195,7 +196,7 @@ You could also update the alias to edit the file in place and not generate a new
 ```
 function cypher_inplace {
     AGE_PUBLIC_KEY=$(cat $SOPS_AGE_KEY_FILE |grep -oP "public key: \K(.*)") $2 $3 $1
-    sops --encrypt --in-place --age $AGE_PUBLIC_KEY  --kms $SOPS_KMS_ARN_PROD
+    sops --encrypt --in-place --age $AGE_PUBLIC_KEY $1 --kms $SOPS_KMS_ARN_PROD
 }
 
 ```
@@ -205,15 +206,14 @@ Decryption functions:
 ``
 `function decypher_inplace {
     AGE_PUBLIC_KEY=$(cat $SOPS_AGE_KEY_FILE |grep -oP "public key: \K(.*)") $2 $3 $1
-    sops --decrypt --in-place --age $SOPS_AGE_KEY_FILE --kms $SOPS_KMS_ARN_PROD
+    sops --decrypt --in-place --age $SOPS_AGE_KEY_FILE $1 --kms $SOPS_KMS_ARN_PROD
 }
 
 function decypher {
     filename=$(basename -- "$1")
     extension="${filename##*.}"
-    filename="${filename%.*}"
-    AGE_PUBLIC_KEY=$(cat $SOPS_AGE_KEY_FILE |grep -oP "public key: \K(.*)") $2 $3 $1
-    sops --decrypt --age $AGE_PUBLIC_KEY  --kms $SOPS_KMS_ARN_PROD >  "$filename.dec.$extension"
+    filename="${filename%.*}"    
+    sops --decrypt --age $AGE_PUBLIC_KEY  --kms $SOPS_KMS_ARN_PROD $1 >  "$filename.dec.$extension"
 }
 
 ```
