@@ -335,3 +335,43 @@ Events:
   ----    ------  ----                ----             -------
   Normal  info    18s (x18 over 17m)  helm-controller  HelmChart 'vault/vault-vault' is not ready
 
+
+
+
+flux logs -n vault --level=error
+2023-03-14T08:13:47.956Z error HelmRepository/vault.vault - Reconciler error failed to fetch Helm repository index: failed to cache index to temporary file: failed to fetch https://github.com/hashicorp/vault-helm/index.yaml : 404 Not Found
+2023-03-14T08:13:49.688Z error HelmRepository/vault.vault - Reconciler error failed to fetch Helm repository index: failed to cache index to temporary file: failed to fetch https://github.com/hashicorp/vault-helm/index.yaml : 404 Not Found
+2023-03-14T08:13:52.869Z error HelmRepository/vault.vault - Reconciler error failed to fetch Helm repository index: failed to cache index to temporary file: failed to fetch https://github.com/hashicorp/vault-helm/index.yaml : 404 Not Found
+2023-03-14T08:13:59.050Z error HelmRepository/vault.vault - Reconciler error failed to fetch Helm repository index: failed to cache index to temporary file: failed to fetch https://github.com/hashicorp/vault-helm/index.yaml : 404 Not Found
+2023-03-14T08:14:11.384Z error HelmRepository/vault.vault - Reconciler error failed to fetch Helm repository index: failed to cache index to temporary file: failed to fetch https://github.com/hashicorp/vault-helm/index.yaml : 404 Not Found
+2023-03-14T08:14:35.827Z error HelmRepository/vault.vault - Reconciler error failed to fetch Helm repository index: failed to cache index to temporary file: failed to fetch https://github.com/hashicorp/vault-helm/index.yaml : 404 Not Found
+2023-03-14T08:15:24.448Z error HelmRepository/vault.vault - Reconciler error failed to fetch Helm repository index: failed to cache index to temporary file: failed to fetch https://github.com/hashicorp/vault-helm/index.yaml : 404 Not Found
+2023-03-14T08:17:00.716Z error HelmRepository/vault.vault - Reconciler error failed to fetch Helm repository index: failed to cache index to temporary file: failed to fetch https://github.com/hashicorp/vault-helm/index.yaml : 404 Not Found
+2023-03-14T08:20:13.181Z error HelmRepository/vault.vault - Reconciler error failed to fetch Helm repository index: failed to cache index to temporary file: failed to fetch https://github.com/hashicorp/vault-helm/index.yaml : 404 Not Found
+2023-03-14T08:26:37.771Z error HelmRepository/vault.vault - Reconciler error failed to fetch Helm repository index: failed to cache index to temporary file: failed to fetch https://github.com/hashicorp/vault-helm/index.yaml : 404 Not Found
+2023-03-14T08:39:26.063Z error HelmRepository/vault.vault - Reconciler error failed to fetch Helm repository index: failed to cache index to temporary file: failed to fetch https://github.com/hashicorp/vault-helm/index.yaml : 404 Not Found
+2023-03-14T08:54:28.493Z error HelmRepository/vault.vault - Reconciler error failed to fetch Helm repository index: failed to cache index to temporary file: failed to fetch https://github.com/hashicorp/vault-helm/index.yaml : 404 Not Found
+2023-03-14T09:09:28.855Z error HelmRepository/vault.vault - Reconciler error failed to fetch Helm repository index: failed to cache index to temporary file: failed to fetch https://github.com/hashicorp/vault-helm/index.yaml : 404 Not Found
+2023-03-14T09:10:37.225Z error HelmRepository/hashicorp.vault - Reconciler error failed to fetch Helm repository index: failed to cache index to temporary file: Get "https://helm.releases.hashhicorp.com/index.yaml": dial tcp: lookup helm.releases.hashhicorp.com on 10.96.0.10:53: no such host
+2023-03-14T09:10:38.864Z error HelmRepository/hashicorp.vault - Reconciler error failed to fetch Helm repository index: failed to cache index to temporary file: Get "https://helm.releases.hashhicorp.com/index.yaml": dial tcp: lookup helm.releases.hashhicorp.com on 10.96.0.10:53: no such host
+2023-03-14T09:10:41.951Z error HelmRepository/hashicorp.vault - Reconciler error failed to fetch Helm repository index: failed to cache index to temporary file: Get "https://helm.releases.hashhicorp.com/index.yaml": dial tcp: lookup helm.releases.hashhicorp.com on 10.96.0.10:53: no such host
+2023-03-14T09:10:48.003Z error HelmRepository/hashicorp.vault - Reconciler error failed to fetch Helm repository index: failed to cache index to temporary file: Get "https://helm.releases.hashhicorp.com/index.yaml": dial tcp: lookup helm.releases.hashhicorp.com on 10.96.0.10:53: no such host
+2023-03-14T09:11:00.066Z error HelmRepository/hashicorp.vault - Reconciler error failed to fetch Helm repository index: failed to cache index to temporary file: Get "https://helm.releases.hashhicorp.com/index.yaml": dial tcp: lookup helm.releases.hashhicorp.com on 10.96.0.10:53: no such host
+2023-03-14T09:11:24.499Z error HelmRepository/hashicorp.vault - Reconciler error failed to fetch Helm repository index: failed to cache index to temporary file: Get "https://helm.releases.hashhicorp.com/index.yaml": dial tcp: lookup helm.releases.hashhicorp.com on 10.96.0.10:53: no such host
+2023-03-14T09:12:12.782Z error HelmRepository/hashicorp.vault - Reconciler error failed to fetch Helm repository index: failed to cache index to temporary file: Get "https://helm.releases.hashhicorp.com/index.yaml": dial tcp: lookup helm.releases.hashhicorp.com on 10.96.0.10:53: no such host
+2023-03-14T09:13:48.926Z error HelmRepository/hashicorp.vault - Reconciler error failed to fetch Helm repository index: failed to cache index to temporary file: Get "https://helm.releases.hashhicorp.com/index.yaml": dial tcp: lookup helm.releases.hashhicorp.com on 10.96.0.10:53: no such host
+2023-03-14T09:17:01.198Z error HelmRepository/hashicorp.vault - Reconciler error failed to fetch Helm repository index: failed to cache index to temporary file: Get "https://helm.releases.hashhicorp.com/index.yaml": dial tcp: lookup helm.releases.hashhicorp.com on 10.96.0.10:53: no such host
+2023-03-14T09:23:25.353Z error HelmRepository/hashicorp.vault - Reconciler error failed to fetch Helm repository index: failed to cache index to temporary file: Get "https://helm.releases.hashhicorp.com/index.yaml": dial tcp: lookup helm.releases.hashhicorp.com on 10.96.0.10:53: no such host
+2023-03-14T09:36:14.243Z error HelmRepository/hashicorp.vault - Reconciler error failed to fetch Helm repository index: failed to cache index to temporary file: Get "https://helm.releases.hashhicorp.com/index.yaml": dial tcp: lookup helm.releases.hashhicorp.com on 10.96.0.10:53: no such host
+yevhenv@yevhenv-VirtualBox:~$ flux get sources helm --all-namespaces
+NAMESPACE  	NAME          	REVISION                                                        	SUSPENDED	READY	MESSAGE                                                                                                                                                                                                             
+flux-system	metrics-server	ac916419e9ae713cbd962e6198a5b9d97fc211cf9b394b954d080260624208c7	False    	True 	stored artifact: revision 'ac916419e9ae713cbd962e6198a5b9d97fc211cf9b394b954d080260624208c7'                                                                                                                       	
+vault      	hashicorp     	                                                                	False    	False	failed to fetch Helm repository index: failed to cache index to temporary file: Get "https://helm.releases.hashhicorp.com/index.yaml": dial tcp: lookup helm.releases.hashhicorp.com on 10.96.0.10:53: no such host	
+yevhenv@yevhenv-VirtualBox:~$ flux get sources chart -n vault
+NAME       	REVISION	SUSPENDED	READY	MESSAGE                                                     
+vault-vault	        	False    	False	no artifact available for HelmRepository source 'hashicorp'	
+yevhenv@yevhenv-VirtualBox:~$ 
+
+
+
+
