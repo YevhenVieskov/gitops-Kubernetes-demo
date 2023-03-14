@@ -6,4 +6,4 @@ metadata:
   namespace: vault
 spec:
   interval: 24h
-  url: https://helm.releases.hashhicorp.com
+  url: https://helm.releases.hashicorp.com
