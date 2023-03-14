@@ -222,5 +222,14 @@ function decypher {
 
 
 
+[Using SOPS with Age and Git like a Pro](https://devops.datenkollektiv.de/using-sops-with-age-and-git-like-a-pro.html)
 
+echo -n 'creation_rules:
+  - shamir_threshold: 1
+    path_regex: "secret.json"
+    encrypted_regex: "^(user|password)$"
+    key_groups:
+      - age:
+        - age1t2c8jft25k5nnr7m2zln473dkxegwvx5ge2pfgarfnaepepmzpzszz63qy
+' >> workspace/.sops.yaml
 
