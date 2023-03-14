@@ -233,3 +233,105 @@ echo -n 'creation_rules:
         - age1t2c8jft25k5nnr7m2zln473dkxegwvx5ge2pfgarfnaepepmzpzszz63qy
 ' >> workspace/.sops.yaml
 
+
+
+Name:         vault
+Namespace:    vault
+Labels:       kustomize.toolkit.fluxcd.io/name=test
+              kustomize.toolkit.fluxcd.io/namespace=flux-system
+Annotations:  <none>
+API Version:  helm.toolkit.fluxcd.io/v2beta1
+Kind:         HelmRelease
+Metadata:
+  Creation Timestamp:  2023-03-14T09:10:36Z
+  Finalizers:
+    finalizers.fluxcd.io
+  Generation:  1
+  Managed Fields:
+    API Version:  helm.toolkit.fluxcd.io/v2beta1
+    Fields Type:  FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          f:kustomize.toolkit.fluxcd.io/name:
+          f:kustomize.toolkit.fluxcd.io/namespace:
+      f:spec:
+        f:chart:
+          f:spec:
+            f:chart:
+            f:sourceRef:
+              f:kind:
+              f:name:
+              f:namespace:
+            f:version:
+        f:interval:
+        f:values:
+          f:server:
+            .:
+            f:affinity:
+            f:ha:
+              .:
+              f:enabled:
+              f:raft:
+                .:
+                f:enabled:
+    Manager:      kustomize-controller
+    Operation:    Apply
+    Time:         2023-03-14T09:24:10Z
+    API Version:  helm.toolkit.fluxcd.io/v2beta1
+    Fields Type:  FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:finalizers:
+          .:
+          v:"finalizers.fluxcd.io":
+    Manager:      helm-controller
+    Operation:    Update
+    Time:         2023-03-14T09:10:36Z
+    API Version:  helm.toolkit.fluxcd.io/v2beta1
+    Fields Type:  FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+        f:failures:
+        f:helmChart:
+        f:observedGeneration:
+    Manager:         helm-controller
+    Operation:       Update
+    Subresource:     status
+    Time:            2023-03-14T09:27:38Z
+  Resource Version:  416461
+  UID:               1a67e505-460b-446c-8675-ff79d951ad1a
+Spec:
+  Chart:
+    Spec:
+      Chart:               vault
+      Reconcile Strategy:  ChartVersion
+      Source Ref:
+        Kind:       HelmRepository
+        Name:       hashicorp
+        Namespace:  vault
+      Version:      0.23.0
+  Interval:         1m0s
+  Values:
+    Server:
+      Affinity:  
+      Ha:
+        Enabled:  true
+        Raft:
+          Enabled:  true
+Status:
+  Conditions:
+    Last Transition Time:  2023-03-14T09:10:36Z
+    Message:               HelmChart 'vault/vault-vault' is not ready
+    Reason:                ArtifactFailed
+    Status:                False
+    Type:                  Ready
+  Failures:                18
+  Helm Chart:              vault/vault-vault
+  Observed Generation:     1
+Events:
+  Type    Reason  Age                 From             Message
+  ----    ------  ----                ----             -------
+  Normal  info    18s (x18 over 17m)  helm-controller  HelmChart 'vault/vault-vault' is not ready
+
