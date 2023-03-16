@@ -1,0 +1,25 @@
+apiVersion: v1
+data:
+    password: ENC[AES256_GCM,data:UUwd3woo5A==,iv:baotCjlW3LUOVZH2e4m7DGzZ26AvJTkXJM/kgOEdB0c=,tag:NRVjVCP10gnjWX3D1D6YeA==,type:str]
+    user: ENC[AES256_GCM,data:iPgHgrBqag==,iv:BUkKTjq25kW8Kd2hWOtp7JPu8yj2NDBtS0UtQuJmAr8=,tag:uOmlknZgvg8cqQypwLkFVQ==,type:str]
+kind: Secret
+metadata:
+    creationTimestamp: null
+    name: basic-auth
+    namespace: default
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault:
+        - vault_address: http://127.0.0.1:8200
+          engine_path: sops
+          key_name: firstkey
+          created_at: "2023-03-16T09:17:05Z"
+          enc: vault:v1:SOEjA3IcSmMx92zyyB24558CWnRGC1eUzehT0wOvhjZKSBWbO5F0sqLS9NDFQzVd0eJLpjejrm+MZJhqCrDW5bubE2H63Tqk5uDbAcRuY5+mRp1VmJ7fTtuL7Befp0TdwrjjEPf6dcbjnRf+BLLz4wQF5TDP+nN180P8L7EXgQCTH/x2moN/J9Q0WfFi/7PM1bK7XELDyt2rtUMxEVfThYCkXkfTxpQzcJssNGXRHQfT+CKMXmP319qvAFklVkXYIc25c6H7UiNt4RZP8P9udYUT/QoUU138sm4pEBTFOSKSaYicHpBJrdjQ+fLcV7riZVW/lBa6VxqvoET3xi67Nb3fiZCbxqddwkVh0sRRpgID8gzHo/82tp3WFHje03rJ3YXRzkwHTL4m1u+OKKZoGmZboLp2/0iJaGsRVNDlfPg0bqWv554tlo4LqvhFVBDCOTNIhFcJjpVf9vIY+xeX4uVDHDHM+UOY6Ox+Z5L1Erwal7N7BloSUDKiT2P0cg76gNWqUwo3+yxTRPcIqdovk9SoQXy40i6DiXPbUqV1PteSGkyUGTLHuI5djFoDsieQGdzNRG9FWc8y/5rOhihgsuwkR7BoNVKQe4UM8prvBJLdvI5/LSvA/Nh5PzvbfR7GKGs267rvKaKTs6dRS3ZYHwyTfFa0MgBiYi1BrBVF3rU=
+    age: []
+    lastmodified: "2023-03-16T09:17:05Z"
+    mac: ENC[AES256_GCM,data:RvM4Qioe2u/bN6jsIQQOrDBLkaAKuSVA8+zVsayx+DeZZPSmP8X4NFcfUQb7gpJ6FgngA7LsEhcB0n+J/wlcPLol1YfAz03ZrEa2ajPXOo9aBIvvAbsH/c2Klxicnh2pKUdwPVOdGcH9nalUUwNo4DXErebglAcLQ32omjNPeOw=,iv:QY6Eqeh4MXrjPyR9iHFEey/e6r7LHiPhCSBDUzzVcYY=,tag:P7zaOS0jMFjI/hXnoQRrjg==,type:str]
+    pgp: []
+    encrypted_regex: ^(data|stringData)$
+    version: 3.7.3
