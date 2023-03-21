@@ -1,0 +1,33 @@
+apiVersion: v1
+data:
+    password: ENC[AES256_GCM,data:GI3VQMVzxba1LQ==,iv:W51KzGgSpqWZZYbvVEYUrnieNQ+L2QJBqSzbqb7sYPM=,tag:pGY8fAY4WaP0GQ0GUu38Vg==,type:str]
+    user: ENC[AES256_GCM,data:qAQOnwHqeA==,iv:K8SJSZcSfsNA7VX5R0NlfhWwJeZE1TacBCqkUBBnR7I=,tag:Oxzgad0c0GTSerOIQeQE3A==,type:str]
+kind: Secret
+metadata:
+    creationTimestamp: null
+    name: basic-auth2
+    namespace: flux-system
+sops:
+    kms:
+        - arn: arn:aws:kms:us-west-2:052776272001:key/525e545d-57b6-483c-9229-1cdd1958db44
+          created_at: "2023-03-21T09:46:06Z"
+          enc: AQICAHg1060XnCwnjOsJlHXF3OQHxelr7aPTUsK+OHRz2oS7MQFzVEQWX1T5VRrHpxJ2r3ZcAAAAfjB8BgkqhkiG9w0BBwagbzBtAgEAMGgGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMWlPjm8fKlixLMJTiAgEQgDu2SHlQ1PExCiREWBIo3Of4qWHNK1F0Egn/qbv9TYeFRRvqsld5nPV0TuBVmjU0zILI3j6hfx4pynlS+g==
+          aws_profile: ""
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age:
+        - recipient: age1acu8hvgcgy3r8vnnpe22lfy6jfs3h2c3wu0thp93vpu27u7p2yaqscf0c9
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBwVXBUY05CWHlQbzhPUDVD
+            WlVBeWtKeXNLUmh3cDJQS0VWSXdlL0lZb200Cm9JTnlRbVk2VGdralNKeW1EVEVa
+            cVkvcEJGVm1HZ0pINFdGNTRja01oeTQKLS0tIFZaMkdCV094dEM5T0RCOEE2SWhs
+            TENUSFFoTWJsSHh5c3hxa0wzRmI1c0UKMnEGA2GnEqVfRVWXGhNmgXcyY1kNYQBR
+            U1Pm/RJShpRzE6iNaU416i27/YX+j0k3U5TL/jXB4ILBHBsoHV473w==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2023-03-21T09:46:07Z"
+    mac: ENC[AES256_GCM,data:p/My1l7B0tb2VjogQYe/3L/x45dG8ZROiBauygHcoSeWg8Snncbw2ROrH2P/8ceAkqp4vbdFFvfWcpcYa9pvldE0f+pcfLxD37aXqhVUIHreH7Ig+lPM4Jx+UpC6R5C+qLpF4PHdD9kbGLpln45SAYN/SSTKBS4bW6D20eugIN4=,iv:QizrsSCO39aaW4+92JGA4AGAiULjmf8iJVF8YvJxtOs=,tag:yxJFBIkAc1x4R1pMefxfzQ==,type:str]
+    pgp: []
+    encrypted_regex: ^(data|stringData)$
+    version: 3.7.3
