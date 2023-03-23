@@ -1,6 +1,0 @@
-creation_rules:
-  - path_regex: .*.yaml
-    encrypted_regex: '^(data|stringData)$'
-    age: age1acu8hvgcgy3r8vnnpe22lfy6jfs3h2c3wu0thp93vpu27u7p2yaqscf0c9
-    kms: arn:aws:kms:us-west-2:052776272001:key/525e545d-57b6-483c-9229-1cdd1958db44
-    hc_vault_transit_uri: "http://127.0.0.1:8200/v1/transit/keys/firstkey"
