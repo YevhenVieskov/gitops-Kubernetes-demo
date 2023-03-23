@@ -372,7 +372,6 @@ NAME       	REVISION	SUSPENDED	READY	MESSAGE
 vault-vault	        	False    	False	no artifact available for HelmRepository source 'hashicorp'	
 yevhenv@yevhenv-VirtualBox:~$ 
 
-kubectl exec vault-0 -n vault -- vault operator unseal $VAULT_UNSEAL_KEY
 
 
 
